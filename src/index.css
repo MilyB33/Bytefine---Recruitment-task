@@ -8,8 +8,8 @@
   --color-black-50: #9b9b9b;
   --color-black-75: #676767;
   --color-black-100: #353535;
-  --color-primary: #3762fb;
-  --color-primary-50: #7209b7;
+  --color-primary: #7209b7;
+  --color-primary-50: rgba(114, 9, 183, 0.5);
 }
 
 body {
