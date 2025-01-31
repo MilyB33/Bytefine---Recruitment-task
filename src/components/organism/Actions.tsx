@@ -17,8 +17,8 @@ export const Actions = () => {
 
       <div className="border-1  border-white-98"></div>
 
-      <div className="pl-auto w-full">
-        <Button label="Export to PNG" onClick={() => {}} />
+      <div className="flex justify-end w-full">
+        <Button onClick={() => {}}>Export to PNG</Button>
       </div>
     </div>
   );

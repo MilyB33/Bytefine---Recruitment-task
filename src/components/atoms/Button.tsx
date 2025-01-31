@@ -1,10 +1,10 @@
 type ButtonProps = {
-  label: string;
+  children: React.ReactNode;
   disabled?: boolean;
   onClick: () => void;
 };
 
-export const Button = ({ label, disabled, onClick }: ButtonProps) => {
+export const Button = ({ children, disabled, onClick }: ButtonProps) => {
   return (
     <button
       className={
@@ -16,7 +16,7 @@ export const Button = ({ label, disabled, onClick }: ButtonProps) => {
       disabled={disabled}
       onClick={onClick}
     >
-      {label}
+      {children}
     </button>
   );
 };
