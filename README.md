@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Live Demo](canvaseditor-three.vercel.app)
+[Live Demo](https://canvaseditor-three.vercel.app/)
 
 ## About
 
