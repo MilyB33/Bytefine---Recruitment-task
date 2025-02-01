@@ -1,9 +1,10 @@
 import canvasInitialBackground from "../../assets/canvasInitial.png";
 import { useEditorContext } from "../../context/editorContext";
+import { ImageElement } from "../molecules/ImageElement";
 import { TextElement } from "../molecules/TextElement";
 
 export const Canvas = () => {
-  const { elements, isDirty } = useEditorContext();
+  const { elements, background, isDirty } = useEditorContext();
 
   return (
     <div className="flex aspect-[4/5] h-full items-center justify-center">
@@ -16,6 +17,12 @@ export const Canvas = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }
+            : background
+            ? {
+                backgroundImage: `url(${background})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }
             : {}
         }
       >
@@ -25,7 +32,7 @@ export const Canvas = () => {
           }
 
           if (element.type === "img") {
-            return <p key={element.id}>img</p>;
+            return <ImageElement {...element} key={element.id} />;
           }
         })}
       </div>

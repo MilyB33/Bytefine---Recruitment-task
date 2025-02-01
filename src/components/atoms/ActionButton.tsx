@@ -1,4 +1,4 @@
-type ActionButtonProps = {
+export type ActionButtonProps = {
   icon: string;
   label: string;
   onClick: (event?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;

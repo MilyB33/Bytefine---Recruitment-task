@@ -4,6 +4,7 @@ import textActionIcon from "../../assets/textAction.svg";
 import imgActionIcon from "../../assets/imgAction.svg";
 import bgAction from "../../assets/bgAction.svg";
 import { useEditorContext } from "../../context/editorContext";
+import { FileActionButton } from "../atoms/FileActionButton";
 
 export const ContentActions = () => {
   const { addElement, addBackground } = useEditorContext();
@@ -12,8 +13,8 @@ export const ContentActions = () => {
     addElement({ type: "text" });
   };
 
-  const addImgElement = () => {
-    addElement({ type: "img", src: "string" });
+  const addImgElement = (src: string) => {
+    addElement({ type: "img", src });
   };
 
   return (
@@ -23,12 +24,18 @@ export const ContentActions = () => {
         label="Text"
         onClick={addTextElement}
       />
-      <ActionButton
+      <FileActionButton
         icon={imgActionIcon}
         label="Image"
-        onClick={addImgElement}
+        onLoad={addImgElement}
+        name="image"
       />
-      <ActionButton icon={bgAction} label="Background" onClick={() => {}} />
+      <FileActionButton
+        icon={bgAction}
+        label="Background"
+        onLoad={addBackground}
+        name="background"
+      />
     </div>
   );
 };
