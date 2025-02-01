@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useEditorContext } from "../context/editorContext";
 
 export const useResetModal = () => {
+  const { resetEditor } = useEditorContext();
   const [isOpen, setIsOpen] = useState(false);
 
   const onOpen = () => {
@@ -11,5 +13,10 @@ export const useResetModal = () => {
     setIsOpen(false);
   };
 
-  return { isOpen, onOpen, onClose };
+  const onConfirm = () => {
+    resetEditor();
+    onClose();
+  };
+
+  return { isOpen, onOpen, onClose, onConfirm };
 };

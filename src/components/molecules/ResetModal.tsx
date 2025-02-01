@@ -6,7 +6,7 @@ import alertIcon from "../../assets/alertIcon.svg";
 import { Button } from "../atoms/Button";
 
 export const ResetModal = () => {
-  const { isOpen, onOpen, onClose } = useResetModal();
+  const { isOpen, onOpen, onClose, onConfirm } = useResetModal();
 
   return (
     <>
@@ -28,7 +28,7 @@ export const ResetModal = () => {
             <button className="cursor-pointer" onClick={onClose}>
               Cancel
             </button>
-            <Button onClick={() => {}}>Reset</Button>
+            <Button onClick={onConfirm}>Reset</Button>
           </div>
         </div>
       </Modal>
