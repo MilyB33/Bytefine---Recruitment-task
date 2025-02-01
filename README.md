@@ -6,7 +6,7 @@
 
 ## About
 
-Canvas Editor is a simple web-based tool that allows users to add text, images, and a background to a customizable canvas.
+Canvas Editor is a simple web-based tool that allows users to add text, images, and a background to a customizable canvas. It also supports exporting the final design as a PNG image.
 
 ## Installation
 
