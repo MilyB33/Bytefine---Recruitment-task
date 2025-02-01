@@ -1,8 +1,11 @@
+import { useEditorContext } from "../../context/editorContext";
 import { Button } from "../atoms/Button";
 import { ActionsHeader } from "../molecules/ActionsHeader";
 import { ContentActions } from "../molecules/ContentActions";
 
 export const Actions = () => {
+  const { exportToPng } = useEditorContext();
+
   return (
     <div className="bg-white w-full h-full flex flex-col justify-between gap-[32px]">
       <ActionsHeader />
@@ -18,7 +21,7 @@ export const Actions = () => {
       <div className="border-1  border-white-98"></div>
 
       <div className="flex justify-end w-full">
-        <Button onClick={() => {}}>Export to PNG</Button>
+        <Button onClick={exportToPng}>Export to PNG</Button>
       </div>
     </div>
   );

@@ -5,10 +5,12 @@ type Context = {
   elements: Element[];
   background?: string;
   isDirty: boolean;
+  editorRef: React.RefObject<HTMLDivElement>;
   addElement: (element: Pick<Element, "type" | "src">) => void;
   removeElement: (id: string) => void;
   addBackground: (background: string) => void;
   resetEditor: () => void;
+  exportToPng: () => void;
 } | null;
 
 export const EditorContext = createContext<Context>(null);

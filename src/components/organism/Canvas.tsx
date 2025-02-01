@@ -4,10 +4,13 @@ import { ImageElement } from "../molecules/ImageElement";
 import { TextElement } from "../molecules/TextElement";
 
 export const Canvas = () => {
-  const { elements, background, isDirty } = useEditorContext();
+  const { elements, background, isDirty, editorRef } = useEditorContext();
 
   return (
-    <div className="flex aspect-[4/5] h-full items-center justify-center">
+    <div
+      ref={editorRef}
+      className="flex aspect-[4/5] h-full items-center justify-center"
+    >
       <div
         className={`relative w-full h-full ${isDirty ? "bg-black-50" : ""}`}
         style={
