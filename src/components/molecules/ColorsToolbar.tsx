@@ -1,4 +1,4 @@
-import { AVAILABLE_COLORS } from "../../hooks/useTextElement";
+import { AVAILABLE_COLORS } from "@hooks/useTextElement";
 
 type ColorsToolbarProps = {
   currentColor: string;

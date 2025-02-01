@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 
-import closeIcon from "../../assets/closeIcon.svg";
+import closeIcon from "@assets/closeIcon.svg";
 
 type ModalProps = {
   isOpen: boolean;

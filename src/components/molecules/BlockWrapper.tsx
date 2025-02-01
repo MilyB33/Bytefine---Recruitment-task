@@ -1,8 +1,10 @@
-import moveIcon from "../../assets/moveIcon.svg";
-import deleteIcon from "../../assets/deleteIcon.svg";
 import { Rnd } from "react-rnd";
+
+import moveIcon from "@assets/moveIcon.svg";
+import deleteIcon from "@assets/deleteIcon.svg";
+import { useBlockWrapper } from "@hooks/useBlockWrapper";
+
 import { ClickAwayListener } from "../atoms/ClickAwayListener";
-import { useBlockWrapper } from "../../hooks/useBlockWrapper";
 
 type BlockWrapperProps = {
   children: React.ReactNode;

@@ -1,4 +1,5 @@
-import logo from "../../assets/logo.svg";
+import logo from "@assets/logo.svg";
+
 import { ResetModal } from "./ResetModal";
 
 export const ActionsHeader = () => {

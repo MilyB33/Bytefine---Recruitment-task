@@ -1,5 +1,6 @@
+import { useImageActionButton } from "@hooks/useImageActionButton";
+
 import { ActionButton, ActionButtonProps } from "./ActionButton";
-import { useImageActionButton } from "../../hooks/useImageActionButton";
 
 type ImageActionButtonProps = Omit<ActionButtonProps, "onClick"> & {
   name: string;

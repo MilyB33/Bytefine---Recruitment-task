@@ -1,6 +1,7 @@
+import { useTextElement } from "@hooks/useTextElement";
+
 import { Element } from "../../types";
 import { BlockWrapper } from "./BlockWrapper";
-import { useTextElement } from "../../hooks/useTextElement";
 import { ColorsToolbar } from "./ColorsToolbar";
 
 type TextElementProps = Omit<Element, "src">;

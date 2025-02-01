@@ -1,8 +1,8 @@
-import resetIcon from "../../assets/resetIcon.svg";
-import { Modal } from "../atoms/Modal";
-import { useResetModal } from "../../hooks/useResetModal";
+import resetIcon from "@assets/resetIcon.svg";
+import alertIcon from "@assets/alertIcon.svg";
+import { useResetModal } from "@hooks/useResetModal";
 
-import alertIcon from "../../assets/alertIcon.svg";
+import { Modal } from "../atoms/Modal";
 import { Button } from "../atoms/Button";
 
 export const ResetModal = () => {

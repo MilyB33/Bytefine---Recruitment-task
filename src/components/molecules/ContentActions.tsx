@@ -1,9 +1,9 @@
-import { ActionButton } from "../atoms/ActionButton";
+import textActionIcon from "@assets/textAction.svg";
+import imgActionIcon from "@assets/imgAction.svg";
+import bgActionIcon from "@assets/bgAction.svg";
+import { useEditorContext } from "@/context/editorContext";
 
-import textActionIcon from "../../assets/textAction.svg";
-import imgActionIcon from "../../assets/imgAction.svg";
-import bgActionIcon from "../../assets/bgAction.svg";
-import { useEditorContext } from "../../context/editorContext";
+import { ActionButton } from "../atoms/ActionButton";
 import { ImageActionButton } from "../atoms/ImageActionButton";
 
 export const ContentActions = () => {

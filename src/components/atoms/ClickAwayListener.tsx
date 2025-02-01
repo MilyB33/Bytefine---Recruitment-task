@@ -1,4 +1,4 @@
-import { useClickAwayListener } from "../../hooks/useClickAwayListener";
+import { useClickAwayListener } from "@hooks/useClickAwayListener";
 
 type ClickAwayListenerProps = {
   children: React.ReactNode;
