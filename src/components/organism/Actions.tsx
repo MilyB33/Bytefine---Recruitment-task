@@ -7,7 +7,7 @@ export const Actions = () => {
   const { exportToPng } = useEditorContext();
 
   return (
-    <div className="bg-white w-full h-full flex flex-col justify-between gap-8">
+    <div className="bg-white w-full flex flex-col justify-between gap-8">
       <ActionsHeader />
 
       <div className="border-1  border-white-98"></div>

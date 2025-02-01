@@ -10,7 +10,7 @@ export const Canvas = () => {
   return (
     <div
       ref={editorRef}
-      className="max-[1150px]:row-start-2 flex aspect-[4/5] h-full items-center justify-center"
+      className="aspect-[4/5] max-[1150px]:row-start-2 w-full"
     >
       <div
         className={`relative w-full h-full ${isDirty ? "bg-black-50" : ""}`}
