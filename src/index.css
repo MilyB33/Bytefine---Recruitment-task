@@ -9,7 +9,25 @@
   --color-black-75: #676767;
   --color-black-100: #353535;
   --color-primary: #7209b7;
+  --color-primary-100: #550788;
   --color-primary-50: rgba(114, 9, 183, 0.5);
+  --color-red: #cb0000;
+
+  --text-button: 15px;
+  --text-button--line-height: 22.5px;
+  --text-button--font-weight: 600;
+
+  --text-display: 32px;
+  --text-display--line-height: 32px;
+  --text-display--font-weight: 700;
+
+  --text-body-bold: 18px;
+  --text-body-bold--line-height: 27px;
+  --text-body-bold--font-weight: 700;
+
+  --text-body-medium: 18px;
+  --text-body-medium--line-height: 27px;
+  --text-body-medium--font-weight: 500;
 }
 
 body {

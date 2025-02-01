@@ -1,14 +1,14 @@
 import moveIcon from "../../assets/moveIcon.svg";
 import deleteIcon from "../../assets/deleteIcon.svg";
-import { useEditorContext } from "../../context/editorContext";
-import { useState } from "react";
 import { Rnd } from "react-rnd";
 import { ClickAwayListener } from "../atoms/ClickAwayListener";
+import { useBlockWrapper } from "../../hooks/useBlockWrapper";
 
 type BlockWrapperProps = {
   children: React.ReactNode;
   elementId: string;
   padding?: { x: number; y: number };
+  initialSize: { width: number; height: number };
   additionalControl?: React.ReactNode;
 };
 
@@ -16,42 +16,30 @@ export const BlockWrapper = ({
   children,
   elementId,
   padding,
+  initialSize,
   additionalControl,
 }: BlockWrapperProps) => {
-  const [isFocused, setIsFocused] = useState(false);
-  const { removeElement } = useEditorContext();
-
-  const onRemove = () => {
-    removeElement(elementId);
-  };
-
-  const onFocus = () => {
-    setIsFocused(true);
-  };
-
-  const onBlur = () => {
-    setIsFocused(false);
-  };
+  const { isFocused, initialPlacement, onRemove, onFocus, onBlur } =
+    useBlockWrapper({ elementId, initialSize });
 
   return (
     <Rnd
       onFocus={onFocus}
-      className={`border-2 ${
-        isFocused ? "border-primary" : "border-transparent"
-      } rounded-md text-center`}
+      className={`
+        border-2 rounded-md text-center ${
+          isFocused ? "border-primary" : "border-transparent"
+        }`}
       bounds="parent"
       resizeHandleComponent={{
         bottomRight: isFocused ? (
-          <div className="rounded-full h-[20px] w-[20px] bg-primary border-white border-[4px]"></div>
-        ) : (
-          <></>
-        ),
+          <div className="rounded-full h-[20px] w-[20px] bg-primary border-white border-4"></div>
+        ) : undefined,
       }}
       default={{
-        x: 0,
-        y: 0,
-        width: 350,
-        height: 120,
+        x: initialPlacement.x,
+        y: initialPlacement.y,
+        width: initialSize.width,
+        height: initialSize.height,
       }}
       style={{ paddingBlock: padding?.y, paddingInline: padding?.x }}
       minHeight={100}

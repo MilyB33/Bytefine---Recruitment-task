@@ -21,7 +21,7 @@ export const ColorsToolbar = ({
             } `}
           >
             <div
-              className="w-[16px] h-[16px] rounded-full"
+              className="w-4 h-4 rounded-full"
               style={{ backgroundColor: color }}
             ></div>
           </button>

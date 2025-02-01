@@ -4,15 +4,16 @@ type ButtonProps = {
   onClick: () => void;
 };
 
-export const Button = ({ children, disabled, onClick }: ButtonProps) => {
+export const Button = ({
+  children,
+  disabled = false,
+  onClick,
+}: ButtonProps) => {
   return (
     <button
-      className={
-        "pt-[8px] pb-[8px] pr-[32px] pl-[32px] text-[15px] rounded-lg text-white font-medium transition-all duration-200 cursor-pointer " +
-        (disabled
-          ? "disabled:bg-[#CDCDCD] disabled:cursor-not-allowed "
-          : "bg-[#7209B7] hover:bg-[#550788] focus:ring-2 focus:ring-primary-50")
-      }
+      className={`pt-2 pb-2 pr-8 pl-8 text-button rounded-lg text-white cursor-pointer
+        disabled:bg-black-25 disabled:cursor-not-allowed
+        bg-primary hover:bg-primary-100 focus:outline-2 focus:outline-primary-50`}
       disabled={disabled}
       onClick={onClick}
     >

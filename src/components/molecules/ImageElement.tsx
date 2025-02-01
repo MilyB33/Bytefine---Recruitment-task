@@ -14,7 +14,7 @@ export const ImageElement = ({ id, src }: ImageElementProps) => {
   }, []);
 
   return (
-    <BlockWrapper elementId={id}>
+    <BlockWrapper elementId={id} initialSize={{ width: 200, height: 200 }}>
       <img
         ref={ref}
         src={src}

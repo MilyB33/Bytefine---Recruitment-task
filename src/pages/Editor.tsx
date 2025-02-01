@@ -8,7 +8,10 @@ export const EditorPage = () => {
 
   return (
     <EditorContext.Provider value={editorContext}>
-      <main className="grid grid-cols-[1fr_minmax(100px,1fr)] items-center h-screen py-[32px] gap-[24px]">
+      <main
+        // style={{ maxWidth: 759 }}
+        className="grid grid-cols-[minmax(100px,759px)] min-[1150px]:grid-cols-[1fr_minmax(100px,1fr)] items-center h-min-screen py-8 px-4 gap-6"
+      >
         <Canvas />
         <Actions />
       </main>

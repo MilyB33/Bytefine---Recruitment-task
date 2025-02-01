@@ -11,7 +11,7 @@ export const ResetModal = () => {
   return (
     <>
       <button
-        className="flex items-center gap-[8px] cursor-pointer border-b border-b-[#CB0000] text-[#CB0000] ml-auto"
+        className="flex items-center gap-2 cursor-pointer border-b border-b-red text-red"
         onClick={onOpen}
       >
         Reset
@@ -20,12 +20,15 @@ export const ResetModal = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <div className="flex flex-col justify-center items-center text-center">
           <img src={alertIcon} width="290" height="290" alt="alert icon" />
-          <h2 className="text-[32px] text-black-100 font-bold mb-4">WARNING</h2>
-          <p className="mb-4 text-black-75 font-medium text-center max-w-[387px]">
+          <h2 className="text-display text-black-100 mb-4">WARNING</h2>
+          <p className="mb-4 text-body-medium text-black-75 text-center max-w-[387px]">
             You’re about to reset whole process. Are you sure you want to do it?
           </p>
-          <div className="flex mt-[48px] gap-[32px] items-center">
-            <button className="cursor-pointer" onClick={onClose}>
+          <div className="flex mt-12 gap-8 items-center">
+            <button
+              className="cursor-pointer text-body-medium"
+              onClick={onClose}
+            >
               Cancel
             </button>
             <Button onClick={onConfirm}>Reset</Button>

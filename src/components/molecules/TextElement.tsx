@@ -12,6 +12,7 @@ export const TextElement = ({ id }: TextElementProps) => {
     <BlockWrapper
       elementId={id}
       padding={{ x: 24, y: 12 }}
+      initialSize={{ width: 350, height: 120 }}
       additionalControl={
         <div className="absolute bottom-[-32px] left-0 pt-[8px]">
           <ColorsToolbar currentColor={color} onChangeColor={onChangeColor} />
@@ -26,7 +27,7 @@ export const TextElement = ({ id }: TextElementProps) => {
         value={text}
         placeholder="Type your text here"
         style={{ color }}
-        className="w-full h-full resize-none focus:outline-none text-center font-bold text-[32px] placeholder:uppercase placeholder:text-black-100 placeholder:opacity-25"
+        className="w-full h-full text-display resize-none focus:outline-none text-center  placeholder:uppercase placeholder:text-black-100 placeholder:opacity-25"
       />
     </BlockWrapper>
   );
