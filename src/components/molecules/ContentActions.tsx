@@ -18,7 +18,7 @@ export const ContentActions = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-x-[29px] gap-y-[32px] mb-auto">
+    <div className="grid grid-cols-2 gap-x-7 gap-y-8 max-[1600px]:gap-y-3 max-[1600px]:gap-x-3 mb-auto">
       <ActionButton
         icon={textActionIcon}
         label="Text"

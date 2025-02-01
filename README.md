@@ -19,3 +19,4 @@ npm run dev
 
 - **react-rnd** - Enables resizable and draggable elements.
 - **html-to-image** - Converts canvas (html) content to an image for export.
+- **Tailwind CSS** - A utility-first CSS framework for styling and responsive design.

@@ -17,12 +17,12 @@ export const Actions = () => {
   };
 
   return (
-    <div className="bg-white w-full flex flex-col justify-between gap-8">
+    <div className="bg-white w-full flex flex-col max-[1600px]:gap-3 gap-8">
       <ActionsHeader />
 
       <div className="border-1  border-white-98"></div>
 
-      <div className="bg-gray-100 rounded-[10px] p-[16px]">
+      <div className="bg-gray-100 rounded-[10px] p-4">
         <h2 className="text-body-bold text-black-100">Add content</h2>
       </div>
 
@@ -30,7 +30,7 @@ export const Actions = () => {
 
       <div className="border-1 border-white-98"></div>
 
-      <div className="flex justify-end w-full">
+      <div className="flex justify-end self-end w-full">
         <Button onClick={onExport} disabled={isExporting}>
           Export to PNG
         </Button>

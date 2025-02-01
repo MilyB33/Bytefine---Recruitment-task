@@ -8,9 +8,11 @@ export const EditorPage = () => {
 
   return (
     <EditorContext.Provider value={editorContext}>
-      <main className="grid grid-cols-[minmax(100px,759px)] min-[1150px]:grid-cols-[minmax(100px,759px)_minmax(100px,759px)] min-h-screen py-4 px-4 gap-6">
-        <Canvas />
-        <Actions />
+      <main className="flex items-center min-h-screen">
+        <div className="grid grid-cols-[minmax(100px,759px)] min-[1300px]:max-w-[85vw] min-[1300px]:grid-cols-[minmax(100px,759px)_minmax(100px,759px)] py-4 px-4 gap-6">
+          <Canvas />
+          <Actions />
+        </div>
       </main>
     </EditorContext.Provider>
   );
