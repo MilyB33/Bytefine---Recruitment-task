@@ -32,7 +32,13 @@ export const useEditor = () => {
     if (!editorRef.current) return;
 
     try {
-      const dataUrl = await toPng(editorRef.current, { cacheBust: false });
+      const dataUrl = await toPng(editorRef.current, {
+        cacheBust: false,
+
+        // Don't know why it needs to be size / 2 (keeping for readiness)
+        canvasWidth: 1080 / 2,
+        canvasHeight: 1350 / 2,
+      });
       const link = document.createElement("a");
       link.download = "my-image-name.png";
       link.href = dataUrl;
