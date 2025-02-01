@@ -28,19 +28,18 @@ export const useEditor = () => {
     setBackground(undefined);
   };
 
-  const exportToPng = () => {
+  const exportToPng = async () => {
     if (!editorRef.current) return;
 
-    toPng(editorRef.current, { cacheBust: false })
-      .then((dataUrl) => {
-        const link = document.createElement("a");
-        link.download = "my-image-name.png";
-        link.href = dataUrl;
-        link.click();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    try {
+      const dataUrl = await toPng(editorRef.current, { cacheBust: false });
+      const link = document.createElement("a");
+      link.download = "my-image-name.png";
+      link.href = dataUrl;
+      link.click();
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const isDirty = useMemo(() => {

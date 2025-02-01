@@ -1,10 +1,20 @@
+import { useState } from "react";
 import { useEditorContext } from "../../context/editorContext";
 import { Button } from "../atoms/Button";
 import { ActionsHeader } from "../molecules/ActionsHeader";
 import { ContentActions } from "../molecules/ContentActions";
 
 export const Actions = () => {
+  const [isExporting, setIsExporting] = useState(false);
   const { exportToPng } = useEditorContext();
+
+  const onExport = async () => {
+    setIsExporting(true);
+
+    await exportToPng();
+
+    setIsExporting(false);
+  };
 
   return (
     <div className="bg-white w-full flex flex-col justify-between gap-8">
@@ -21,7 +31,9 @@ export const Actions = () => {
       <div className="border-1 border-white-98"></div>
 
       <div className="flex justify-end w-full">
-        <Button onClick={exportToPng}>Export to PNG</Button>
+        <Button onClick={onExport} disabled={isExporting}>
+          Export to PNG
+        </Button>
       </div>
     </div>
   );

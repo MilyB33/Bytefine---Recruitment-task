@@ -10,7 +10,7 @@ type Context = {
   removeElement: (id: string) => void;
   addBackground: (background: string) => void;
   resetEditor: () => void;
-  exportToPng: () => void;
+  exportToPng: () => Promise<void>;
 } | null;
 
 export const EditorContext = createContext<Context>(null);
