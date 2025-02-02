@@ -17,7 +17,7 @@ export const Actions = () => {
   };
 
   return (
-    <div className="bg-white w-full flex flex-col max-[1600px]:gap-3 gap-8">
+    <div className="bg-white flex flex-col max-[1600px]:gap-3 gap-8">
       <ActionsHeader />
 
       <div className="border-1  border-white-98"></div>
